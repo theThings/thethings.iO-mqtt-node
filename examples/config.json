@@ -1,0 +1,8 @@
+{
+    "USER_TOKEN" : "your user token",
+    "THING_TOKEN" : "your thing token",
+    "TOPIC_USER_TOKEN" : "the user token from the user you want to publish (can be your user token)",
+    "TOPIC_THING_TOKEN" : "the thing token from the thing you want to publish (can be your thing token)",
+    "TOPIC_USER_NAME" : "the user name from the user you want to publish (can be your user name)",
+    "TOPIC_THING_NAME" : "the thing name from the thing you want to publish (can be your thing name)"
+}

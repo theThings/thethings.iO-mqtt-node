@@ -1,0 +1,30 @@
+{
+    "name": "mqtt.theThings.IO",
+    "description": "MQTT library for theThings.IO endpoint",
+    "version": "0.0.1",
+    "private": false,
+    "author": "TheThingsIO <hello@thethings.io>",
+    "contributors": [
+        {
+            "name": "Martí Zamora",
+            "email": "marti@thethings.io"
+        }
+    ],
+    "keywords":[
+        "client",
+        "theThings",
+        "theThings.IO",
+        "MQTT",
+        "internet of things",
+        "IoT"
+    ],
+    "license": "MIT",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/theThings/thethingsio-api-node.git"
+    },
+    "readmeFilename": "README.md",
+    "dependencies": {
+        "mqtt": "0.3.12"
+    }
+}
