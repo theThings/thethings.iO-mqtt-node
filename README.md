@@ -12,7 +12,6 @@ npm install thethingsio-mqtt
 You can put your credentials in a file called config.json with this format:
 
 ```js
-
 {
     "USER_TOKEN" : "your user token",
     "THING_TOKEN" : "your thing token",
@@ -61,7 +60,6 @@ rl.on('line', function (cmd) {
 You can subscribe as many topics as you want just calling:
 ```js
    client.subscribe(topicname);
-
 ```
 
 It's recommended to put the subscriptions inside the client.on('connect') because when the client reconnects
@@ -71,7 +69,6 @@ automatically auto resubscribe too.
 It is also possible to load a different config file passing the path whe creating the client.
 ```js
    client.subscribe('path/to/different/config/file.json);
-
 ```
 
 Finally you can pass a configuration object as a parameter.
@@ -87,5 +84,4 @@ Finally you can pass a configuration object as a parameter.
         "TOPIC_THING_NAME" : "the thing name from the thing you want to publish (can be your thing name)"
     }
    var client = theThingsMqtt.createClient(config);
-
 ```
