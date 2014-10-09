@@ -26,7 +26,7 @@ The following code connects to theThings.IO mqtt broker and subscribes to the de
 
 ```js
 
-var theThingsMqtt = require('mqtt.theThings.IO');
+var theThingsMqtt = require('thethingsio-mqtt');
 
 //connect using the configuration in ./config.json
 var client = theThingsMqtt.createClient();

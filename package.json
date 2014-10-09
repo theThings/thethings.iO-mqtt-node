@@ -1,7 +1,7 @@
 {
     "name": "thethingsio-mqtt",
     "description": "MQTT library for theThings.IO endpoint",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "private": false,
     "author": "TheThingsIO <hello@thethings.io>",
     "contributors": [
