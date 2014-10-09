@@ -3,7 +3,6 @@ This lib allows to connect to the mqtt.theThings.IO broker.
 
 #Install
 ```
-
 npm install thethingsio-mqtt
 ```
 
@@ -25,7 +24,6 @@ You can put your credentials in a file called config.json with this format:
 The following code connects to theThings.IO mqtt broker and subscribes to the default topic /public/TOPIC_USER_NAME/TOPIC_THING_NAME
 
 ```js
-
 var theThingsMqtt = require('thethingsio-mqtt');
 
 //connect using the configuration in ./config.json
