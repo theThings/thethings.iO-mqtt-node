@@ -1,85 +1,27 @@
-#theThings.IO node mqtt lib
-This lib allows to connect to the mqtt.theThings.IO broker.
+#thethings.iO node mqtt examples
+This package contains some examples that show how to interact with thetthings mqtt broker.
 
 #Install
 ```
 npm install thethingsio-mqtt
 ```
 
-##Getting started
+##thethings.iO MQTT borker
 
-You can put your credentials in a file called config.json with this format:
-
-```js
-{
-    "USER_TOKEN" : "your user token",
-    "THING_TOKEN" : "your thing token",
-    "TOPIC_USER_TOKEN" : "the user token from the user you want to publish (can be your user token)",
-    "TOPIC_THING_TOKEN" : "the thing token from the thing you want to publish (can be your thing token)",
-    "TOPIC_USER_NAME" : "the user name from the user you want to publish (can be your user name)",
-    "TOPIC_THING_NAME" : "the thing name from the thing you want to publish (can be your thing name)"
-}
+```
+mqtt.thethings.io
 ```
 
-The following code connects to theThings.IO mqtt broker and subscribes to the default topic /public/TOPIC_USER_NAME/TOPIC_THING_NAME
+###[complete-client.js](https://github.com/theThings/thethingsio-coap-node/tree/master/examples/complete-client.js)
 
-```js
-var theThingsMqtt = require('thethingsio-mqtt');
+This code activates a thing and subscribes to it's topic then you can write in the console the key-value pairs and observe the real-time data in the [panel](panel.thethings.io)
 
-//connect using the configuration in ./config.json
-var client = theThingsMqtt.createClient();
+You can also combine the protocols and write with [http/s](https://github.com/theThings/thethingsio-api-node) or [CoAP](https://github.com/theThings/thethingsio-coap-node)
+while you read the data with MQTT.
 
-//called when the client connects successfully to the broker
-client.on('connect',function(){
-   //subscribe to the default topic
-   client.subscribe();
-});
+###[secure-client.js](https://github.com/theThings/thethingsio-coap-node/tree/master/examples/secure-client.js)
+This example shows how to connect to the thethings.iO with ssl encryption.
 
-//called when a message arrives
-client.on('message', function(topic,message){
-    console.log(topic, message);
-});
+###[last-will-client.js](https://github.com/theThings/thethingsio-coap-node/tree/master/examples/last-will-client.js)
 
-var readline = require('readline');
-
-//wait for user input
-var rl = readline.createInterface({
-    input: process.stdin,
-    output: process.stdout,
-    terminal: true
-});
-
-//when the user inputs something publish to the default topic
-rl.on('line', function (cmd) {
-    client.publish(cmd);
-});
-```
-
-You can subscribe as many topics as you want just calling:
-```js
-   client.subscribe(topicname);
-```
-
-It's recommended to put the subscriptions inside the client.on('connect') because when the client reconnects
-automatically auto resubscribe too.
-
-
-It is also possible to load a different config file passing the path whe creating the client.
-```js
-   client.subscribe('path/to/different/config/file.json);
-```
-
-Finally you can pass a configuration object as a parameter.
-
-```js
-
-    var config = {
-        "USER_TOKEN" : "your user token",
-        "THING_TOKEN" : "your thing token",
-        "TOPIC_USER_TOKEN" : "the user token from the user you want to publish (can be your user token)",
-        "TOPIC_THING_TOKEN" : "the thing token from the thing you want to publish (can be your thing token)",
-        "TOPIC_USER_NAME" : "the user name from the user you want to publish (can be your user name)",
-        "TOPIC_THING_NAME" : "the thing name from the thing you want to publish (can be your thing name)"
-    }
-   var client = theThingsMqtt.createClient(config);
-```
+Last will is a MQTT feature to tell the broker to notify when the device abruptly disconnects. This example shows you how to configure the broker to send a message when the device goes down.
