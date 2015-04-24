@@ -26,6 +26,6 @@ TODO
 
 ###[last-will-client.js](https://github.com/theThings/thethingsio-mqtt-node/tree/master/examples/last-will-client.js)
 
-TODO
-
 Last will is a MQTT feature to tell the broker to notify when the device abruptly disconnects. This example shows you how to configure the broker to send a message when the device goes down.
+
+TODO
