@@ -1,5 +1,5 @@
-#thethings.iO node mqtt examples
-This package contains some examples that show how to interact with thethings.iO mqtt broker.
+#thethings.iO node MQTT examples
+This package contains some examples that show how to interact with thethings.iO MQTT broker.
 
 #Install
 ```
