@@ -1,4 +1,4 @@
-#thethings.iO node MQTT examples
+#thethings.iO Node.js MQTT examples
 This package contains some examples that show how to interact with thethings.iO MQTT broker.
 
 #Install
