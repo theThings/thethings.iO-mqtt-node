@@ -1,5 +1,5 @@
 //Example to activate a client at thethings.iO platform
-//Note: You the activation code shall not be used instead, you can set the
+//Note: the activation code shall not be used instead, you can set the
 //thingToken directly
 
 //Usage: write key-value pairs in the console
